@@ -6,4 +6,10 @@ $(document).ready(function () {
       $(".navbar").removeClass("sticky");
     }
   });
+
+  $(".works").magnificPopup({
+    delegate: "a",
+    type: "image",
+    gallery: { enabled: true },
+  });
 });

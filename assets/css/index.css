@@ -441,6 +441,107 @@ section.dark .section-title::after {
   color: #ffffff;
 }
 
+.time-line {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bloc {
+  width: calc(50% - 20px);
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  margin: 10px 0;
+  padding: 30px;
+  position: relative;
+}
+
+.bloc::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 120%;
+  background-color: #dddddd;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bloc::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #48dbfb;
+  left: -28px;
+  top: 30px;
+  border-radius: 50%;
+}
+
+.bloc h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.bloc p {
+  font-size: 15px;
+  color: #444444;
+}
+
+.works {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.work {
+  width: calc(33% - 30px);
+  height: 250px;
+  overflow: hidden;
+  border-radius: 6px;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.work img {
+  width: 100%;
+  height: 100%;
+  transition: 0.4s linear;
+}
+
+.work::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #48dbfbcc;
+  transition: 0.2s linear;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.work .info {
+  position: absolute;
+  z-index: 2;
+  bottom: 40px;
+  left: 40px;
+  color: #ffffff;
+  transition: 0.4 linear;
+  opacity: 0;
+}
+
+.work:hover img {
+  transform: scale(1.6) rotate(25deg);
+}
+
+.work:hover::before,
+.work:hover .info {
+  opacity: 1;
+  transform: scale(1);
+}
+
 @media screen and (max-width: 980px) {
   .menu {
     display: block;
@@ -489,6 +590,15 @@ section.dark .section-title::after {
   .service {
     width: calc(50% - 20px);
   }
+
+  .bloc {
+    width: calc(100% - 20px);
+    margin-left: auto;
+  }
+
+  .work {
+    width: calc(50% - 20px);
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -501,6 +611,10 @@ section.dark .section-title::after {
   }
 
   .service {
+    width: 100%;
+  }
+
+  .work {
     width: 100%;
   }
 }
