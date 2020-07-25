@@ -19,6 +19,8 @@
     <script src="../assets/js/all.min.js"></script>
     <script src="../assets/js/magnific-popup.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
     <title>Mon Site :D</title>
   </head>
   <body>
@@ -52,10 +54,10 @@
         <div class="navbar-menu">
           <a href="#home">Home</a>
           <a href="#about">À propos</a>
-          <a href="">Services</a>
-          <a href="">Cursus</a>
-          <a href="">Travaux</a>
-          <a href="">Contact</a>
+          <a href="#services">Services</a>
+          <a href="#cursus">Cursus</a>
+          <a href="#travaux">Travaux</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
     </nav>
@@ -67,19 +69,25 @@
         <div class="content">
           <h1>Bonjour, je suis</h1>
           <div class="reseaux">
-            <a class="res" href="#">
+            <a class="res" href="https://www.facebook.com/matthieu.leproux.7/">
               <i class="fab fa-facebook"></i>
             </a>
-            <a class="res" href="#">
+            <a
+              class="res"
+              href="https://www.linkedin.com/in/matthieu-leproux-59750419a/"
+            >
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a class="res" href="#">
+            <a
+              class="res"
+              href="https://www.instagram.com/matthieuleproux/?hl=fr"
+            >
               <i class="fab fa-instagram"></i>
             </a>
-            <a class="res" href="#">
+            <a class="res" href="https://twitter.com/__Warcraf__">
               <i class="fab fa-twitter"></i>
             </a>
-            <a class="res" href="#">
+            <a class="res" href="https://github.com/MatthieuLP">
               <i class="fab fa-github"></i>
             </a>
           </div>
@@ -362,5 +370,102 @@
         </div>
       </div>
     </section>
+
+    <!-- Contact -->
+
+    <section id="contact">
+      <div class="inner-width">
+        <h1 class="section-title">Contactez moi !</h1>
+
+        <div class="contact-info">
+          <div class="item">
+            <i class="fas fa-mobile-alt" id="item"></i>
+            +33 6 11 24 19 12
+          </div>
+
+          <div class="item">
+            <i class="fas fa-envelope" id="item"></i>
+            leproux.matthieu@gmail.com
+          </div>
+
+          <div class="item">
+            <i class="fas fa-map-marker-alt" id="item"></i>
+            Nantes, France
+          </div>
+        </div>
+
+        <form
+          action="https://formspree.io/leproux.matthieu@gmail.com"
+          method="POST"
+          class="contact-form"
+        >
+          <input
+            type="text"
+            class="nameZone"
+            name="name"
+            placeholder="Your Name"
+          />
+          <input
+            type="text"
+            class="emailZone"
+            name="email"
+            placeholder="Your Email"
+          />
+          <input
+            type="text"
+            class="subjectZone"
+            name="subject"
+            placeholder="Your Subject"
+          />
+          <textarea
+            class="messageZone"
+            name="message"
+            placeholder="Your message"
+          ></textarea>
+
+          <div class="statusZone"></div>
+
+          <input type="submit" value="Send Message" class="btn submit" />
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+      <div class="inner-width">
+        <div class="copyrights">
+          &copy; 2020 | Créé par <a href="#">Matthieu Leproux</a>
+        </div>
+
+        <div class="sm">
+          <a class="res-sm" href="https://www.facebook.com/matthieu.leproux.7/">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a
+            class="res-sm"
+            href="https://www.linkedin.com/in/matthieu-leproux-59750419a/"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            class="res-sm"
+            href="https://www.instagram.com/matthieuleproux/?hl=fr"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a class="res-sm" href="https://twitter.com/__Warcraf__">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a class="res-sm" href="https://github.com/MatthieuLP">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Remonter en haut  -->
+
+    <button class="goTop"><i class="fas fa-arrow-up"></i></button>
   </body>
 </html>
