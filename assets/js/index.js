@@ -13,6 +13,12 @@ $(document).ready(function () {
     scroll(0, 0);
   });
 
+  $(".works").magnificPopup({
+    delegate: "a",
+    type: "image",
+    gallery: { enabled: true },
+  });
+
   /* Envoi du mail */
 
   $(".submit").click(function (event) {
@@ -54,11 +60,5 @@ $(document).ready(function () {
       event.preventDefault();
       statusElem.append("<div> message is not valid </div>");
     }
-  });
-
-  $(".works").magnificPopup({
-    delegate: "a",
-    type: "image",
-    gallery: { enabled: true },
   });
 });
