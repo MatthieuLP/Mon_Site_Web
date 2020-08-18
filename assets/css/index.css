@@ -25,6 +25,10 @@ html {
   background-color: #353b48;
 }
 
+.hidden {
+  display: none;
+}
+
 /* NavBar + Header */
 
 .navbar {
@@ -160,7 +164,7 @@ html {
   margin-bottom: 60px;
 }
 
-#home .content h1::after {
+#home .content h1.FR::after {
   content: " Matthieu Leproux";
   animation: animationFR 10s linear infinite;
 }
@@ -171,6 +175,23 @@ html {
   }
   50% {
     content: " super Sympa";
+  }
+  75% {
+    content: ' "Croustimatt"';
+  }
+}
+
+#home .content h1.ENG::after {
+  content: " Matthieu Leproux";
+  animation: animationENG 10s linear infinite;
+}
+
+@keyframes animationENG {
+  25% {
+    content: " Web Developper";
+  }
+  50% {
+    content: " Very Nice";
   }
   75% {
     content: ' "Croustimatt"';
@@ -199,6 +220,54 @@ html {
 #home .buttons a:nth-child(2) {
   background: #48dbfb;
   color: white;
+}
+
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+  position: absolute;
+  left: -9999px;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 10px 20px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before{
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #48dbfb;
+  background-color: #000000;
+  font-family: 'FontAwesome';
+  content: "\f060";
+  z-index: 20;
+  top: -10px;
+  left: -10px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 19px;
+  transition: all 0.5s ease;
+}
+.checkbox:checked + label:before {
+  transform: translateX(44px) rotate(-180deg);
+}
+
+.switch-lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .reseaux {
@@ -463,7 +532,7 @@ section.dark .section-title::after {
   margin: 20px 0;
   padding: 40px 20px;
   color: #ffffff;
-  cursor: pointer;
+  cursor: default;
   transition: 0.3s linear;
 }
 

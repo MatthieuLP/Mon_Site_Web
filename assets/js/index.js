@@ -61,4 +61,40 @@ $(document).ready(function () {
       statusElem.append("<div> message is not valid </div>");
     }
   });
+
+  /**
+   * Changement de langue
+   */
+
+  var ENG = document.querySelectorAll(".ENG")
+  var FR= document.querySelectorAll(".FR") 
+
+  ENG.forEach(element => {
+    element.classList.add("hidden")
+  });
+
+  $('input[class=checkbox]').change(function(){
+    if($(this).is(':checked')) {
+
+        FR.forEach(element => {
+          element.classList.add("hidden")
+        });
+
+        ENG.forEach(element => {
+          element.classList.remove("hidden")
+        });
+        
+    } else {
+
+      FR.forEach(element => {
+        element.classList.remove("hidden")
+      });
+
+      ENG.forEach(element => {
+        element.classList.add("hidden")
+      });
+
+    }
+});
+
 });

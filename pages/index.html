@@ -17,6 +17,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../assets/js/index.js"></script>
     <script src="../assets/js/all.min.js"></script>
+    <script src="https://use.fontawesome.com/7906b88441.js"></script>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
 
@@ -54,12 +56,21 @@
         </button>
         <!--  -->
 
-        <div class="navbar-menu">
+        <div class="navbar-menu FR">
           <a href="#home">Home</a>
           <a href="#about">À propos</a>
           <a href="#services">Services</a>
           <a href="#cursus">Cursus</a>
           <a href="#travaux">Travaux</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="navbar-menu ENG">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#cursus">Education</a>
+          <a href="#travaux">Works</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
@@ -70,7 +81,9 @@
     <section id="home">
       <div class="inner-width">
         <div class="content">
-          <h1>Bonjour, je suis</h1>
+          <h1 class="FR">Bonjour, je suis</h1>
+
+          <h1 class="ENG">Hi ! I'm</h1>
           <div class="reseaux">
             <a
               class="res"
@@ -104,9 +117,19 @@
               <i class="fab fa-github"></i>
             </a>
           </div>
-          <div class="buttons">
+          <div class="buttons FR">
             <a href="#">Télécharger mon CV</a>
             <a href="#contact">Me contacter</a>
+          </div>
+
+          <div class="buttons ENG">
+            <a href="#">Download CV</a>
+            <a href="#contact">Contact Me</a>
+          </div>
+
+          <div class="switch-lang">
+            <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                  <label for="reg-log"></label>
           </div>
         </div>
       </div>
