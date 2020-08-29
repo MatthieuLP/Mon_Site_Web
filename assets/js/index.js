@@ -13,11 +13,11 @@ $(document).ready(function () {
     scroll(0, 0);
   });
 
-  $(".works").magnificPopup({
-    delegate: "a",
-    type: "image",
-    gallery: { enabled: true },
-  });
+  // $(".works").magnificPopup({
+  //   delegate: "a",
+  //   type: "image",
+  //   gallery: { enabled: true },
+  // });
 
   /* Envoi du mail */
 
@@ -66,35 +66,30 @@ $(document).ready(function () {
    * Changement de langue
    */
 
-  var ENG = document.querySelectorAll(".ENG")
-  var FR= document.querySelectorAll(".FR") 
+  var ENG = document.querySelectorAll(".ENG");
+  var FR = document.querySelectorAll(".FR");
 
-  ENG.forEach(element => {
-    element.classList.add("hidden")
+  ENG.forEach((element) => {
+    element.classList.add("hidden");
   });
 
-  $('input[class=checkbox]').change(function(){
-    if($(this).is(':checked')) {
+  $("input[class=checkbox]").change(function () {
+    if ($(this).is(":checked")) {
+      FR.forEach((element) => {
+        element.classList.add("hidden");
+      });
 
-        FR.forEach(element => {
-          element.classList.add("hidden")
-        });
-
-        ENG.forEach(element => {
-          element.classList.remove("hidden")
-        });
-        
+      ENG.forEach((element) => {
+        element.classList.remove("hidden");
+      });
     } else {
-
-      FR.forEach(element => {
-        element.classList.remove("hidden")
+      FR.forEach((element) => {
+        element.classList.remove("hidden");
       });
 
-      ENG.forEach(element => {
-        element.classList.add("hidden")
+      ENG.forEach((element) => {
+        element.classList.add("hidden");
       });
-
     }
-});
-
+  });
 });

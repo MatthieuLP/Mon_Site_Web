@@ -222,14 +222,13 @@ html {
   color: white;
 }
 
-
 [type="checkbox"]:checked,
-[type="checkbox"]:not(:checked){
+[type="checkbox"]:not(:checked) {
   position: absolute;
   left: -9999px;
 }
 .checkbox:checked + label,
-.checkbox:not(:checked) + label{
+.checkbox:not(:checked) + label {
   position: relative;
   display: block;
   text-align: center;
@@ -242,7 +241,7 @@ html {
   background-color: #f1f1f1;
 }
 .checkbox:checked + label:before,
-.checkbox:not(:checked) + label:before{
+.checkbox:not(:checked) + label:before {
   position: absolute;
   display: block;
   width: 36px;
@@ -250,7 +249,7 @@ html {
   border-radius: 50%;
   color: #48dbfb;
   background-color: #000000;
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   content: "\f060";
   z-index: 20;
   top: -10px;
@@ -652,6 +651,13 @@ section.dark .section-title::after {
   color: #ffffff;
   transition: 0.4 linear;
   opacity: 0;
+}
+
+.work .info .git {
+  text-decoration: none;
+  color: #000000;
+  font-size: 25px;
+  margin-top: 20px;
 }
 
 .work:hover img {
