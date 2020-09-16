@@ -1,95 +1,98 @@
 $(document).ready(function () {
-  $(window).scroll(function () {
-    if (this.scrollY > 20) {
-      $(".navbar").addClass("sticky");
-      $(".goTop").fadeIn();
-    } else {
-      $(".navbar").removeClass("sticky");
-      $(".goTop").fadeOut();
-    }
-  });
+    $(window).scroll(function () {
+        if (this.scrollY > 20) {
+            $(".navbar").addClass("sticky");
+            $(".goTop").fadeIn();
+        } else {
+            $(".navbar").removeClass("sticky");
+            $(".goTop").fadeOut();
+        }
+    });
 
-  $(".goTop").click(function () {
-    scroll(0, 0);
-  });
+    $(".goTop").click(function () {
+        scroll(0, 0);
+    });
 
-  // $(".works").magnificPopup({
-  //   delegate: "a",
-  //   type: "image",
-  //   gallery: { enabled: true },
-  // });
+    /* Menu Hamburger */
 
-  /* Envoi du mail */
+    $(".menu").click(function () {
+        console.log("menu open");
+        this.classList.toggle("opened");
+        $(".navbar-menu").toggleClass("active");
+        this.setAttribute("aria-expanded", this.classList.contains("opened"));
+    });
 
-  $(".submit").click(function (event) {
-    console.log("cliqué");
+    /* Envoi du mail */
 
-    var name = $(".nameZone").val();
-    var email = $(".emailZone").val();
-    var subject = $(".subjectZone").val();
-    var message = $(".messageZone").val();
+    $(".submit").click(function (event) {
+        console.log("cliqué");
 
-    var statusElem = $(".statusZone").val();
+        var name = $(".nameZone").val();
+        var email = $(".emailZone").val();
+        var subject = $(".subjectZone").val();
+        var message = $(".messageZone").val();
 
-    statusElem.empty();
+        var statusElem = $(".statusZone").val();
 
-    if (name.length >= 5) {
-      statusElem.append("<div> Email is valid </div>");
-    } else {
-      statusElem.append("<div> Email is not valid </div>");
-      event.preventDefault();
-    }
+        statusElem.empty();
 
-    if (email.length > 5 && email.includes("@") && email.includes(".")) {
-      statusElem.append("<div> Email is valid </div>");
-    } else {
-      statusElem.append("<div> Email is not valid </div>");
-      event.preventDefault();
-    }
+        if (name.length >= 5) {
+            statusElem.append("<div> Email is valid </div>");
+        } else {
+            statusElem.append("<div> Email is not valid </div>");
+            event.preventDefault();
+        }
 
-    if (subject.length >= 2) {
-      statusElem.append("<div> subject is valid </div>");
-    } else {
-      event.preventDefault();
-      statusElem.append("<div> subject is not valid </div>");
-    }
+        if (email.length > 5 && email.includes("@") && email.includes(".")) {
+            statusElem.append("<div> Email is valid </div>");
+        } else {
+            statusElem.append("<div> Email is not valid </div>");
+            event.preventDefault();
+        }
 
-    if (message.length >= 10) {
-      statusElem.append("<div> message is valid </div>");
-    } else {
-      event.preventDefault();
-      statusElem.append("<div> message is not valid </div>");
-    }
-  });
+        if (subject.length >= 2) {
+            statusElem.append("<div> subject is valid </div>");
+        } else {
+            event.preventDefault();
+            statusElem.append("<div> subject is not valid </div>");
+        }
 
-  /**
-   * Changement de langue
-   */
+        if (message.length >= 10) {
+            statusElem.append("<div> message is valid </div>");
+        } else {
+            event.preventDefault();
+            statusElem.append("<div> message is not valid </div>");
+        }
+    });
 
-  var ENG = document.querySelectorAll(".ENG");
-  var FR = document.querySelectorAll(".FR");
+    /**
+     * Changement de langue
+     */
 
-  ENG.forEach((element) => {
-    element.classList.add("hidden");
-  });
+    var ENG = document.querySelectorAll(".ENG");
+    var FR = document.querySelectorAll(".FR");
 
-  $("input[class=checkbox]").change(function () {
-    if ($(this).is(":checked")) {
-      FR.forEach((element) => {
+    ENG.forEach((element) => {
         element.classList.add("hidden");
-      });
+    });
 
-      ENG.forEach((element) => {
-        element.classList.remove("hidden");
-      });
-    } else {
-      FR.forEach((element) => {
-        element.classList.remove("hidden");
-      });
+    $("input[class=checkbox]").change(function () {
+        if ($(this).is(":checked")) {
+            FR.forEach((element) => {
+                element.classList.add("hidden");
+            });
 
-      ENG.forEach((element) => {
-        element.classList.add("hidden");
-      });
-    }
-  });
+            ENG.forEach((element) => {
+                element.classList.remove("hidden");
+            });
+        } else {
+            FR.forEach((element) => {
+                element.classList.remove("hidden");
+            });
+
+            ENG.forEach((element) => {
+                element.classList.add("hidden");
+            });
+        }
+    });
 });
