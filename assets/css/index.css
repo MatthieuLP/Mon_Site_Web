@@ -177,7 +177,7 @@ html {
     content: " super Sympa";
   }
   75% {
-    content: ' Étudiant';
+    content: " Étudiant";
   }
 }
 
@@ -194,7 +194,7 @@ html {
     content: " Very Nice";
   }
   75% {
-    content: ' a Student';
+    content: " a Student";
   }
 }
 
@@ -526,7 +526,7 @@ section.dark .section-title::after {
 
 .services {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -540,6 +540,8 @@ section.dark .section-title::after {
   color: #ffffff;
   cursor: default;
   transition: 0.3s linear;
+
+  margin: 20px 10px;
 }
 
 .service .icon {
